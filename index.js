@@ -86,3 +86,20 @@ function resetState() {
   }
  
 }
+// Function to save score and username to localStorage
+function saveScore() {
+    const userData = {
+      name: userName,
+      score: score
+    }
+    localStorage.setItem('quizUserData', JSON.stringify(userData)) // Save as JSON
+  }
+// Function to save score and username to localStorage
+function saveScore() {
+    const userData = {
+      name: userName,
+      score: score
+    }
+    localStorage.setItem('quizUserData', JSON.stringify(userData)) // Save as JSON
+  }
+    
