@@ -70,4 +70,19 @@ function resetState() {
     Array.from(answerButtonsElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
-  
+  // If correct answer, increase the score
+  if (correct) {
+    score++
+  }
+ 
+
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide')
+  } else {
+    saveScore() // Save score to localStorage when quiz ends
+    startButton.innerText = 'Restart'
+    startButton.classList.remove('hide')
+    viewScoreButton.classList.remove('hide') // Show the view score button
+  }
+ 
+}
